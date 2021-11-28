@@ -12,37 +12,37 @@
 /*------------------------------------*\
     #ABSTRACTS
 \*------------------------------------*/
-@import "scss/abstracts/variables";
-@import "scss/abstracts/mixins";
-@import "scss/abstracts/colors";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/colors";
 
 /*------------------------------------*\
     #BASE
 \*------------------------------------*/
-@import "scss/base/reset";
-@import "scss/base/body";
-@import "scss/base/links";
-@import "scss/base/lists";
-@import "scss/base/headings";
-@import "scss/base/forms";
-@import "scss/base/buttons";
-@import "scss/base/main";
-@import "scss/base/media";
-@import "scss/base/text";
-@import "scss/base/table";
+@import "base/reset";
+@import "base/body";
+@import "base/links";
+@import "base/lists";
+@import "base/headings";
+@import "base/forms";
+@import "base/buttons";
+@import "base/main";
+@import "base/media";
+@import "base/text";
+@import "base/table";
 
 /*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
-@import "scss/layout/layout";
+@import "layout/layout";
 
 /*------------------------------------*\
     #UTILITIES
 \*------------------------------------*/
-@import "scss/utilities/visibility";
-@import "scss/utilities/spacing";
+@import "utilities/visibility";
+@import "utilities/spacing";
 
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
-@import "../_patterns/**/*.scss";
+// @import "../_patterns/**/*.scss";
