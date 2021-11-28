@@ -10,7 +10,8 @@
     "pl:install": "patternlab install --config ./patternlab-config.json",
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version",
-    "start": "npm run pl:serve"
+    "start": "concurrently --names \"PATTERNLAB,PARCEL\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run pl:serve\" \"npm run parcel\"",
+    "parcel": "parcel watch --target css:dev"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +24,16 @@
     "@pattern-lab/uikit-workshop": "^5.15.3"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "2.0.1",
     "concurrently": "6.4.0",
     "parcel": "2.0.1"
+  },
+  "targets": {
+    "css:dev": {
+      "source": [
+        "source/scss/style.scss"
+      ],
+      "distDir": "source/css/"
+    }
   }
 }
