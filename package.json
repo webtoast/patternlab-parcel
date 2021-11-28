@@ -21,5 +21,9 @@
     "@pattern-lab/engine-handlebars": "^5.15.1",
     "@pattern-lab/starterkit-handlebars-vanilla": "^1.4.2",
     "@pattern-lab/uikit-workshop": "^5.15.3"
+  },
+  "devDependencies": {
+    "concurrently": "6.4.0",
+    "parcel": "2.0.1"
   }
 }
