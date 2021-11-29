@@ -11,7 +11,7 @@
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version",
     "start": "concurrently --names \"PATTERNLAB,PARCEL\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run pl:serve\" \"npm run parcel\"",
-    "parcel": "parcel watch --target css:dev"
+    "parcel": "parcel watch --target css:dev --target js:dev"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +35,12 @@
         "source/scss/pattern-scaffolding.scss"
       ],
       "distDir": "source/css/"
+    },
+    "js:dev": {
+      "source": [
+        "source/js/global.js"
+      ],
+      "distDir": "source/js/build"
     }
   }
 }
