@@ -31,7 +31,8 @@
   "targets": {
     "css:dev": {
       "source": [
-        "source/scss/style.scss"
+        "source/scss/style.scss",
+        "source/scss/pattern-scaffolding.scss"
       ],
       "distDir": "source/css/"
     }
