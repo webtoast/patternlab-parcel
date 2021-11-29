@@ -11,7 +11,11 @@
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version",
     "start": "concurrently --names \"PATTERNLAB,PARCEL\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run pl:serve\" \"npm run parcel\"",
-    "parcel": "parcel watch --target css:dev --target js:dev"
+    "parcel": "parcel watch --target css:dev --target js:dev",
+    "parcel:build": "parcel build --target css:prod --target js:prod",
+    "prebuild": "rm -rf ./dist",
+    "build": "npm run parcel:build",
+    "postbuild": "node ./build-scripts/postbuild && rm -rf ./.build-cache"
   },
   "keywords": [],
   "author": "",
@@ -42,11 +46,24 @@
       ],
       "distDir": "source/css/"
     },
+    "css:prod": {
+      "source": [
+        "source/scss/style.scss"
+      ],
+      "sourceMap": false,
+      "distDir": ".build-cache"
+    },
     "js:dev": {
       "source": [
         "source/js/global.js"
       ],
       "distDir": "source/js/build"
+    },
+    "js:prod": {
+      "source": [
+        "source/js/global.js"
+      ],
+      "distDir": ".build-cache"
     }
   }
 }
