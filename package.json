@@ -36,7 +36,8 @@
     "cssnano": "5.0.12",
     "parcel": "2.0.1",
     "postcss": "8.4.4",
-    "postcss-prefix-selector": "1.13.0"
+    "postcss-prefix-selector": "1.13.0",
+    "postcss-prettify": "0.3.4"
   },
   "targets": {
     "css:dev": {
