@@ -64,6 +64,7 @@
       "source": [
         "source/js/global.js"
       ],
+      "sourceMap": false,
       "distDir": ".build-cache"
     }
   }
