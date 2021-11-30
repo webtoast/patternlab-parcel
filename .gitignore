@@ -3,3 +3,4 @@ dependencyGraph.json
 css
 .parcel-cache
 build
+dist
