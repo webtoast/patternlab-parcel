@@ -1,7 +1,10 @@
+// Custom modules
+const namespace = require('./build-scripts/namespace')();
+
 const prefix = require('postcss-prefix-selector')({
-    prefix: '.global-experience-language',
+    prefix: namespace,
     exclude: [
-        '.global-experience-language',
+        namespace,
     ]
 });
 

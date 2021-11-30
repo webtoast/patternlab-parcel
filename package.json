@@ -67,5 +67,6 @@
       "sourceMap": false,
       "distDir": ".build-cache"
     }
-  }
+  },
+  "namespace": "gobal-experience-language"
 }
