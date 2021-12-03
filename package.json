@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "pl:build": "patternlab build --config ./patternlab-config.json",
     "pl:help": "patternlab --help",
     "pl:install": "patternlab install --config ./patternlab-config.json",
@@ -34,6 +34,7 @@
     "css-declaration-sorter": "6.1.3",
     "css-mqpacker": "7.0.0",
     "cssnano": "5.0.12",
+    "jest": "27.4.3",
     "parcel": "2.0.1",
     "postcss": "8.4.4",
     "postcss-prefix-selector": "1.13.0",
@@ -68,5 +69,8 @@
       "distDir": ".build-cache"
     }
   },
-  "namespace": "gobal-experience-language"
+  "namespace": "gobal-experience-language",
+  "jest": {
+    "rootDir": "source"
+  }
 }
