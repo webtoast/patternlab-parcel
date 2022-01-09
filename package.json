@@ -41,7 +41,8 @@
     "parcel": "2.1.1",
     "postcss": "8.4.5",
     "postcss-prefix-selector": "1.14.0",
-    "postcss-prettify": "0.3.4"
+    "postcss-prettify": "0.3.4",
+    "svg-sprite": "1.5.3"
   },
   "targets": {
     "css:dev": {
