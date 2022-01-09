@@ -6,6 +6,7 @@ const fs = require('fs');
 const SVGSpriter = require('svg-sprite');
 
 // Code
+const env = process.env.NODE_ENV;
 const svgPaths = {
     source: path.join(__dirname, "../source/icons"),
     dest: path.join(__dirname, "../source/css")
@@ -14,7 +15,7 @@ const svgPaths = {
 const config = {
     mode: {
         stack: {
-            dest: "source/images/svg",
+            dest: env === 'production' ? ".build-cache/svg" : "source/images/svg",
             sprite: "icons.svg"
         }
     }

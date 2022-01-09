@@ -14,7 +14,7 @@
     "parcel": "parcel watch --target css:dev --target js:dev",
     "parcel:build": "parcel build --target css:prod --target js:prod",
     "prebuild": "rm -rf ./dist",
-    "build": "npm run parcel:build",
+    "build": "npm run parcel:build && NODE_ENV=production npm run svg",
     "postbuild": "node ./build-scripts/postbuild && rm -rf ./.build-cache",
     "svg": "node ./build-scripts/svg.js"
   },
