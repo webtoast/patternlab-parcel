@@ -82,5 +82,6 @@
     "presets": [
       "@babel/preset-env"
     ]
-  }
+  },
+  "icons": true
 }

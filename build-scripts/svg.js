@@ -6,6 +6,11 @@ const fs = require('fs');
 const SVGSpriter = require('svg-sprite');
 
 // Code
+if (process.env.npm_package_icons === 'false') {
+    console.log('SVG Icon compliation has not been configured.')
+    return;
+}
+
 const env = process.env.NODE_ENV;
 const svgPaths = {
     source: path.join(__dirname, "../source/icons"),
