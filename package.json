@@ -13,9 +13,9 @@
     "start": "concurrently --names \"PATTERNLAB,PARCEL,JEST\" -c \"bgBlue.bold,bgMagenta.bold,bgYellow.bold\" \"npm run pl:serve\" \"npm run parcel\" \"npm test\"",
     "parcel": "parcel watch --target css:dev --target js:dev",
     "parcel:build": "parcel build --target css:prod --target js:prod",
-    "prebuild": "rm -rf ./dist",
+    "prebuild": "trash ./dist",
     "build": "npm run parcel:build && NODE_ENV=production npm run svg",
-    "postbuild": "node ./build-scripts/postbuild && rm -rf ./.build-cache",
+    "postbuild": "node ./build-scripts/postbuild && trash ./.build-cache",
     "svg": "node ./build-scripts/svg.js"
   },
   "keywords": [],
@@ -43,7 +43,8 @@
     "postcss": "8.4.5",
     "postcss-prefix-selector": "1.14.0",
     "postcss-prettify": "0.3.4",
-    "svg-sprite": "1.5.3"
+    "svg-sprite": "1.5.3",
+    "trash-cli": "5.0.0"
   },
   "targets": {
     "css:dev": {
