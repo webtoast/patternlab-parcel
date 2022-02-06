@@ -75,7 +75,7 @@
       "distDir": ".build-cache"
     }
   },
-  "namespace": "gobal-experience-language",
+  "namespace": ".gel",
   "jest": {
     "rootDir": "source"
   },

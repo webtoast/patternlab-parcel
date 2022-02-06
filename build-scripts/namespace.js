@@ -6,7 +6,7 @@ function namespace() {
     if (namespace === undefined || namespace === '') {
         return namespace = '';
     } else {
-        return namespace = '.' + namespace;
+        return namespace;
     }
 };
 
