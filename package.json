@@ -75,7 +75,7 @@
       "distDir": ".build-cache"
     }
   },
-  "namespace": ".gel",
+  "namespace": "",
   "jest": {
     "rootDir": "source"
   },
