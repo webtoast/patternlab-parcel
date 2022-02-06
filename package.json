@@ -16,7 +16,8 @@
     "prebuild": "trash ./dist",
     "build": "npm run parcel:build && NODE_ENV=production npm run svg",
     "postbuild": "node ./build-scripts/postbuild && trash ./.build-cache",
-    "svg": "node ./build-scripts/svg.js"
+    "svg": "node ./build-scripts/svg.js",
+    "release": "npm version $npm_config_bump --no-git-tag-version && npm run build"
   },
   "keywords": [],
   "author": "",
