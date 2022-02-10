@@ -1,4 +1,4 @@
-# Pattern Lab with Parcel
+# [Pattern Lab with Parcel](https://github.com/webtoast/patternlab-parcel)
 
 A [Pattern Lab](https://patternlab.io) starter that uses [Parcel](https://parceljs.org) to process most assets.
 
