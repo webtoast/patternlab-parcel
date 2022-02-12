@@ -1,6 +1,6 @@
 # [Pattern Lab with Parcel](https://github.com/webtoast/patternlab-parcel)
 
-A [Pattern Lab](https://patternlab.io) starter that uses [Parcel](https://parceljs.org) to process most assets.
+A [Pattern Lab](https://patternlab.io) starter that uses [Parcel](https://parceljs.org).
 
 ## Test Drive
 
@@ -10,15 +10,31 @@ Nothing should need to be changed or configured to run Pattern Lab locally.
 2. `npm install`
 3. `npm start`
 
-## Setup
+## Features
 
-This was setup using [starterkit-handlebars-vanilla](https://github.com/pattern-lab/starterkit-handlebars-vanilla), with some modificatiions to the scss folder structure.
+* Compiles your Sass into CSS
+  * PostCSS optimizations
+  * Optionally [namespace](#namespacing) your CSS
+  * Optionally add defense css in case your project has to play nicely with existing CSS (coming soon)
+* Compiles your Javascript
+* Javascript unit testing
+* Compiles SVG icons into an SVG symbol
+* Enforces commit message guidelines with [commitlint](https://commitlint.js.org/#/)
+* Build new releases of your project (coming soon)
+* Track file size with each release (coming soon)
+* Lint scss (coming soon)
+
+## Configuring
+
+The `./source` folder was originally generated from [starterkit-handlebars-vanilla](https://github.com/pattern-lab/starterkit-handlebars-vanilla). Some modificatiions have been made to the scss folder structure for this starter.
 
 ### Styles
 
 Add your Sass partials in `./source/scss` directory and reference those partials in `./source/scss/style.scss`. How you organize this folder is completely up to you. When `style.scss` is compiled, the resulting css file is output to `./source/css` and then copied into the public folder when you run `npm start`.
 
 The current folder structure is based on the starterkit with the exception of the components folder. Originally, these partials were stored with the relevant pattern. However, importing a glob pattern in `@import` statements isn't working. To get the starter up and running, I moved all the partials to `./source/scss/components` and updated `style.scss` with `@import` statements for each partial.
+
+### Namespacing
 
 For various reasons, you may want to namespace your CSS. You can do this with the namespace key in `package.json`. The default is set to an empty string value, but if you update this key with a class selector like `.project` then all your css selectors will be namespaced. For example:
 
@@ -63,7 +79,7 @@ The compiled svg is saved in `./source/images/svg` because the images folder is 
 
 In order to compile a collection of SVGs, you must make sure that the icons key in `package.json` has been set to true, which is the default. If set to false, no svg file will be created regardless of existing svg files in the directory. Setting the option to false will not delete any svg files or an existing svg symbol file.
 
-#### Steps to build SVG stack
+#### Steps to build an SVG symbol
 
 1. Save individual svg icons in `./source/icons`
 2. Run `npm run svg`
@@ -74,3 +90,4 @@ In order to compile a collection of SVGs, you must make sure that the icons key 
 
 A syntax error in a sass partial will cause parcel to stop processing. The only way to resolve is to stop the process and `npm start` again.
 
+Git GUIs may require configuration updates so that git hooks work.
