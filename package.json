@@ -20,7 +20,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "@pattern-lab/cli": "^5.16.2",
     "@pattern-lab/core": "^5.16.2",
