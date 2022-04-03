@@ -11,7 +11,7 @@ const prefix = require('postcss-prefix-selector')({
 module.exports = {
     plugins: [
         require('autoprefixer'),
-        require('css-mqpacker')({ sort: true }),
+        require('@hail2u/css-mqpacker')({ sort: true }),
         require('css-declaration-sorter')({ order: 'smacss' }),
         ...(process.env.NODE_ENV === 'production' ? [prefix] : []),
     ]
