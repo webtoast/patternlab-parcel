@@ -20,7 +20,7 @@ Nothing should need to be changed or configured to run Pattern Lab locally.
 * Javascript unit testing
 * Compiles SVG icons into an SVG symbol
 * Enforces commit message guidelines with [commitlint](https://commitlint.js.org/#/)
-* Build new releases of your project (coming soon)
+* Build a new [release](#release-builds) of your project
 * Track file size with each release (coming soon)
 * Lint scss (coming soon)
 
@@ -85,6 +85,14 @@ In order to compile a collection of SVGs, you must make sure that the icons key 
 2. Run `npm run svg`
 3. Implement the icon in a pattern
 4. Run pattern lab locally
+
+## Release Builds
+
+When it is time to build a new release, you can use `npm run release`. This script takes a single parameter that tells the script what version to bump to.
+
+`npm run release --bump=[major | minor | patch | X.X.X]`
+
+Currently, built files are saved to `./dist` which is not tracked by default at this time.
 
 ## Known Limitations
 
