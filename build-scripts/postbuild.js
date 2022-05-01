@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Public modules
-const prettify = require('postcss-prettify');
+const cssbeautify = require('cssbeautify');
 
 // Code
 const version = JSON.parse(fs.readFileSync('./package.json', 'utf-8')).version;
@@ -21,7 +21,7 @@ try {
 
     fs.mkdirSync(path.join(__dirname, '../dist'));
     fs.writeFileSync('./dist/global.min.css', cssDist);
-    fs.writeFile('./dist/global.css', prettify.process(cssDist).css, (err) => {
+    fs.writeFile('./dist/global.css', cssbeautify(cssDist), (err) => {
         return err;
     });
     fs.writeFileSync('./dist/global.js', jsDist);
