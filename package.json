@@ -17,7 +17,8 @@
     "build": "npm run parcel:build && NODE_ENV=production npm run svg",
     "postbuild": "node ./build-scripts/postbuild && trash ./.build-cache",
     "svg": "node ./build-scripts/svg.js",
-    "release": "npm version $npm_config_bump --no-git-tag-version && npm run build"
+    "release": "npm version $npm_config_bump --no-git-tag-version && npm run build",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
