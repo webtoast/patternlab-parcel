@@ -86,7 +86,8 @@
   "patternMergeVariantArrays": true,
   "renderFlatPatternsOnViewAllPages": false,
   "serverOptions": {
-    "wait": 1000
+    "wait": 1000,
+    "open": false
   },
   "starterkitSubDir": "dist",
   "styleGuideExcludes": [],
