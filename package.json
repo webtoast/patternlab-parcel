@@ -10,7 +10,7 @@
     "pl:install": "patternlab install --config ./patternlab-config.json",
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version",
-    "start": "concurrently --names \"PATTERNLAB,PARCEL,JEST\" -c \"bgBlue.bold,bgMagenta.bold,bgYellow.bold\" \"npm run pl:serve\" \"npm run parcel\" \"npm test\"",
+    "dev": "concurrently --names \"PATTERNLAB,PARCEL,JEST\" -c \"bgBlue.bold,bgMagenta.bold,bgYellow.bold\" \"npm run pl:serve\" \"npm run parcel\" \"npm test\"",
     "parcel": "parcel watch --target css:dev --target js:dev",
     "parcel:build": "parcel build --target css:prod --target js:prod",
     "prebuild": "trash ./dist",
