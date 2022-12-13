@@ -8,31 +8,34 @@ Nothing should need to be changed or configured to run Pattern Lab locally.
 
 1. Clone down the repo
 2. `npm install`
-3. `npm start`
+3. `npm run dev`
 
 ## Features
 
-* Compiles your Sass into CSS
+* Compiles Sass into CSS
   * PostCSS optimizations
   * Optionally [namespace](#namespacing) your CSS
-  * Optionally add defense css in case your project has to play nicely with existing CSS (coming soon)
-* Compiles your Javascript
+* Compiles Javascript
 * Javascript unit testing
-* Compiles SVG icons into an SVG symbol
+* Compiles [SVG icons](#svg-icons) into an SVG symbol
 * Enforces commit message guidelines with [commitlint](https://commitlint.js.org/#/)
 * Build a new [release](#release-builds) of your project
-* Track file size with each release (coming soon)
-* Lint scss (coming soon)
 
 ## Configuring
 
-The `./source` folder was originally generated from [starterkit-handlebars-vanilla](https://github.com/pattern-lab/starterkit-handlebars-vanilla). Some modificatiions have been made to the scss folder structure for this starter.
+This Pattern Lab starter is a blank project. Running it will produce a website that can be previewed on localhost, but you will not see any patterns until you create some.
+
+Under the `./source` folder, are all the folders that you would be working with to create your patterns, save images, icons, scss and other authored files.
+
+If you are brand new to Pattern Lab the best place to start will be the [docs](https://patternlab.io).
+
+### Patterns
+
+The default folders have been kept in `./source/_patterns` just to serve as a starting point for organizing your patterns. This starter uses handlebars for building pattern files. If you want to see how handlebars are used in pattern development, the [patterns in the starterkit-handlebars-vanilla](https://github.com/pattern-lab/starterkit-handlebars-vanilla/tree/master/dist/_patterns) repo has some good examples.
 
 ### Styles
 
 Add your Sass partials in `./source/scss` directory and reference those partials in `./source/scss/style.scss`. How you organize this folder is completely up to you. When `style.scss` is compiled, the resulting css file is output to `./source/css` and then copied into the public folder when you run `npm start`.
-
-The current folder structure is based on the starterkit with the exception of the components folder. Originally, these partials were stored with the relevant pattern. However, importing a glob pattern in `@import` statements isn't working. To get the starter up and running, I moved all the partials to `./source/scss/components` and updated `style.scss` with `@import` statements for each partial.
 
 ### Namespacing
 
@@ -65,6 +68,8 @@ CSS output
 }
 ```
 
+**It's important to note that the namespace is only added when you build a release of your project. The namespace is not included when you are running Pattern Lab locally during development.**
+
 ### Javascript
 
 If needing to add functionality to your components, there is `./source/js/global.js` that allows you to add your own javascript. You should be able to install dependencies or create your own modules that can be imported using ES6 module syntax. When running Pattern Lab, javascript gets compiled to `./source/js/build/global.js` and this is the file that is referenced and used in Pattern Lab.
@@ -73,7 +78,8 @@ If you build modules, you can use `./source/js/__tests__` to write unit tests. Y
 
 ### SVG Icons
 
-This setup takes individual svg files and combines them using [svg-sprite](https://github.com/svg-sprite/svg-sprite) into a single file with svg symbols. If you would like to use SVG icons, you will want to store them in `./source/icons`. In this directory you want to keep the structure flat and just store the individual svg files without nesting folders. To build the svg symbols file out of your icons, you will need to run `npm run svg`. As additional files are added, you will need to run the npm script again.
+This setup takes individual svg files and combines them using [svg-sprite](https://github.com/svg-sprite/svg-sprite) into a single file with svg symbols. If you would like to use SVG icons, you will want to store them in `./source/icons`. In this directory you want to keep the structure flat and just store the individual svg files without nesting folders. To build the svg symbols file,
+ out of your icons, you will need to run `npm run svg`. As additional files are added, you will need to run the npm script again.
 
 The compiled svg is saved in `./source/images/svg` because the images folder is automatically copied into the public directory when pattern lab is run locally.
 
